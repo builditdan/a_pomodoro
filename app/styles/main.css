@@ -1,0 +1,76 @@
+body {margin:0;}
+
+#header {
+    
+    background: green; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(green, white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(green, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(green, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(green, white); /* Standard syntax */
+    color:white;
+    text-align:center;
+    height:100px;
+    background-size: cover;
+    width:100%
+}
+
+#col1 {
+    line-height:30px;
+    background-color:#E9E9E9;
+    height:100%;
+    width:500px;
+    float:left;
+    padding:5px;
+    margin-right:100px;
+    margin-top:25px;
+}
+
+#col2 {
+    background-color:white;
+    width:300px;
+    float:left;
+    padding:10px;	
+    margin-top:25px;
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+
+
+#start-button {
+  background-color:green;
+  color: white;
+  padding: 15px 52px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 30px;
+  cursor: pointer;
+  border: 2px solid;
+  border-radius: 25px
+}
+
+#timer-countdown {
+
+  text-align: left;
+  margin-left: 45px;
+
+}
+
+#pomodoro {
+  margin-left: 20px;
+  text-align: center;
+  width:150px;
+  height:150px;
+}
+
+
+#timer-selection {
+  margin-bottom:25px;
+  text-align: left;
+}
