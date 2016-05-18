@@ -29,7 +29,6 @@ body {margin:0;}
     background-color:white;
     width:300px;
     float:left;
-    padding:10px;	
     margin-top:25px;
 }
 #footer {
@@ -49,26 +48,34 @@ body {margin:0;}
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 30px;
+  /*margin: 4px 125px;*/
   cursor: pointer;
   border: 2px solid;
-  border-radius: 25px
+  border-radius: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 
 #timer-countdown {
-
-  text-align: left;
-  margin-left: 45px;
+  text-align: center;
 
 }
 
 #pomodoro {
-  margin-left: 20px;
-  text-align: center;
-  width:150px;
-  height:150px;
+  /*margin-left: 125px;*/
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width:150px;
+ height:150px;
 }
 
+#timer-message {
+
+  text-align: center;
+}
 
 #timer-selection {
   margin-bottom:25px;
