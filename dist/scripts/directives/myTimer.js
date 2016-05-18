@@ -30,9 +30,9 @@ function controller($scope, dateFilter,$interval) {
     
     this.timerDuration = function() {
 
-      const WORK_SESSION = 25,
-          BREAK_SESSION_1 = 10,
-          BREAK_SESSION_2 = 30,
+      const WORK_SESSION = 2,
+          BREAK_SESSION_1 = 1,
+          BREAK_SESSION_2 = 3,
           LAST_EVENT = 8;
 
       tDuration = null;
@@ -63,9 +63,11 @@ function controller($scope, dateFilter,$interval) {
         alert("Timer Completed");
         btn.text("Start");
         $scope.myController.setTimerMsg(true, msg);
+        $scope.current = 0;
         return $scope.myController.formatTime($scope.myController.timerDuration($scope.timerIndex));
 
       }
+      $scope.current += 1;
       return dateFilter(diffTime, "m:ss");
     };
       
@@ -95,12 +97,16 @@ function controller($scope, dateFilter,$interval) {
       //scope.startTheTimer = attrs.startTheTimer;
       scope.timerIndex = 1;
       scope.timerValue = "25:00";
+      scope.max = (25 * 60) * 2;
+      scope.current = 0;
+
       scope.startTimer = function(event) {
         currentTime = new Date();
         msg = element.find("h3");
         btn = element.find("button");
         duration = scope.myController.timerDuration();
-        stopTime = new Date(currentTime.getTime() + duration*600)
+        scope.max = (duration * 60) * 2;
+        stopTime = new Date(currentTime.getTime() + duration*60000)
        
         if (btn.text() === "Cancel") {
           scope.myController.stopTheTimer(timerId);
@@ -109,6 +115,8 @@ function controller($scope, dateFilter,$interval) {
           scope.timerValue = scope.myController.formatTime(scope.myController.timerDuration(scope.timerIndex));
           btn.text("Start");
           scope.myController.setTimerMsg(true, msg);
+          scope.current = 0;
+  
         }
         else {
           btn.text("Cancel");
@@ -127,9 +135,24 @@ function controller($scope, dateFilter,$interval) {
   return {
     link: link,
     template: `<img id="pomodoro" src="assets/images/apple.jpg" alt="pomodoro timer">
-                <h1 id="timer-countdown" ng-model="timerIndex">{{timerValue}}</h1>
-                <button id="start-button" ng-click="startTimer()">Start</button>
-                <h3 id="timer-message">Begin your Session!</h3>`
+               <round-progress id="progress-bar"
+                  max="max"
+                  current="current" 
+                  color="red"
+                  bgcolor="#eaeaea"
+                  radius="100"
+                  stroke="20"
+                  semi="true"
+                  rounded="true"
+                  clockwise="false"
+                  responsive="false"
+                  duration="800"
+                  animation="easeInOutQuart"
+                  animation-delay="0">
+              </round-progress>
+              <h1 id="timer-countdown" ng-model="timerIndex">{{timerValue}}</h1>
+              <button id="start-button" ng-click="startTimer()">Start</button>
+              <h3 id="timer-message">Begin your Session!</h3>`
   };
       
       
@@ -138,7 +161,6 @@ function controller($scope, dateFilter,$interval) {
 angular.module("aPomodoro")
 .controller("controller", ['$scope', 'dateFilter', '$interval', controller])
 .directive('myTimer', ['$interval','dateFilter', myTimer]);
-
 
 
 

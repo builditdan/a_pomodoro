@@ -21,7 +21,7 @@
 }
   
   angular
-         .module('aPomodoro', ['ui.router'])
+         .module('aPomodoro', ['ui.router', 'angular-svg-round-progressbar'])
          .config(config);
   
     

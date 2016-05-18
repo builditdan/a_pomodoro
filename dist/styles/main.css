@@ -72,6 +72,11 @@ body {margin:0;}
  height:150px;
 }
 
+#progress-bar {
+ margin-top: 35px;  
+ text-align: center;
+}
+
 #timer-message {
 
   text-align: center;
