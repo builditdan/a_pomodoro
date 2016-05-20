@@ -12,7 +12,7 @@
       $stateProvider
       .state('landing', {
         url: '/',
-        controller: 'controller as myController',
+       // controller: 'controller as myController',
         templateUrl: '/templates/landing.html'
 
       })
