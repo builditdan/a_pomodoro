@@ -4,7 +4,7 @@
     var myTask = {};
 
     function addTask(item) {
-      tasks.$add({ task: item }).then(function(firebaseRef) {
+      tasks.$add({ task: item, dateAdded: Date() }).then(function(firebaseRef) {
         var id = firebaseRef.key();
         tasks.$indexFor(id); // returns location in the array
       });
