@@ -7,7 +7,7 @@
 
       <br><br><br>
       <ul>
-        <li id="task-list" ng-repeat="elem in taskList" ng-dblclick="deleteTask(elem)">{{elem.user}} {{elem.task}}</li>
+        <li id="task-list" ng-repeat="elem in taskList | orderBy:'-dateAdded' : reverse"" ng-dblclick="deleteTask(elem)">{{elem.user}} {{elem.task}}</li>
       </ul>
     </div>
     -Double click on a task to delete it!
