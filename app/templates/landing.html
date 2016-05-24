@@ -1,11 +1,26 @@
-<div id="col1">
-  <h2>Task History</h2>
-</div>
+  <div id="col1">
+    <h2 id="task-title">Task History</h2>
+    <div ng-controller="taskController">
+      <input id="task-box" type="text" ng-model="aTask"/>
+      <button id="add-button" ng-click="addTask(aTask)">Add Task</button>
+      <button id="wipe-button" ng-click="deleteAllTasks()">Delete all Tasks</button>
 
-<div id="col2">
+      <br><br><br>
+      <ul>
+        <li id="task-list" ng-repeat="elem in taskList" ng-dblclick="deleteTask(elem)">{{elem.user}} {{elem.task}}</li>
+      </ul>
+    </div>
+    -Double click on a task to delete it!
+  </div>
   
-  <my-timer></my-timer>
-</div>
+  
+
+  <div id="col2">
+
+    <my-timer></my-timer>
+  </div>
+
+
 
  
 

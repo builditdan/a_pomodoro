@@ -159,7 +159,7 @@
               </round-progress>
               <h1 id="timer-countdown" ng-model="timerIndex">{{timerValue}}</h1>
               <button id="start-button" ng-click="startTimer()">Start</button>
-              <h3 id="timer-message">Begin your Session!</h3>`
+              <h2 id="timer-message">Begin your Session!</h2>`
   };
       
       

@@ -20,7 +20,8 @@ body {margin:0;}
     height:100%;
     width:500px;
     float:left;
-    padding:5px;
+    padding-top:5px;
+    padding-bottom:5px;
     margin-right:100px;
     margin-top:25px;
 }
@@ -48,13 +49,77 @@ body {margin:0;}
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  /*margin: 4px 125px;*/
   cursor: pointer;
   border: 2px solid;
   border-radius: 25px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  
+}
+
+#task-title {
+  margin-left:10px;
+}
+
+#task-box {
+  font-size: 20px;
+  margin-left:25px;
+  width:90%;
+}
+
+ul
+{
+    list-style-type: none;
+    padding:0px;
+}
+
+#task-list {
+    width:100%;
+    font-size: 30px;
+    height:45px;
+    padding-top:22.5px;
+  text-align: center;
+
+}
+li:nth-child(odd) { 
+  background: #9BA1A0; 
+  
+}
+
+#delete-button {
+  width:15px;
+  height:15px;
+  margin-right:5px;
+}
+
+#add-button {
+  background-color:#E5E6E7;
+  color: black;
+  padding: 10px 40px;
+  float: right;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+  margin: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  
+}
+
+#wipe-button {
+  background-color:#E5E6E7;
+  color: red;
+  padding: 10px 40px;
+  float: right;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+  margin: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   
 }
 
