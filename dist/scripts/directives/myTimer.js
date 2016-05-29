@@ -36,9 +36,9 @@
     
     timerDuration = function() {
 
-      const WORK_SESSION = 2,
-          BREAK_SESSION_1 = 1,
-          BREAK_SESSION_2 = 3,
+      const WORK_SESSION = 25,
+          BREAK_SESSION_1 = 5,
+          BREAK_SESSION_2 = 15,
           LAST_EVENT = 8;
 
       tDuration = null;
