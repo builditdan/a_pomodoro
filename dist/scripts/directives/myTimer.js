@@ -141,7 +141,7 @@
   return {
     link: link,
     controller: controller,
-    template: `<img id="pomodoro" src="assets/images/apple.jpg" alt="pomodoro timer">
+    template: `<div id="col2"><img id="pomodoro" src="assets/images/apple.jpg" alt="pomodoro timer">
                <round-progress id="progress-bar"
                   max="max"
                   current="current" 
@@ -159,7 +159,7 @@
               </round-progress>
               <h1 id="timer-countdown" ng-model="timerIndex">{{timerValue}}</h1>
               <button id="start-button" ng-click="startTimer()">Start</button>
-              <h2 id="timer-message">Begin your Session!</h2>`
+              <h2 id="timer-message">Begin your Session!</h2></div>`
   };
       
       

@@ -18,7 +18,7 @@ body {margin:0;}
     line-height:30px;
     background-color:#E9E9E9;
     height:100%;
-    width:500px;
+    width:50%;
     float:left;
     padding-top:5px;
     padding-bottom:5px;
@@ -28,8 +28,8 @@ body {margin:0;}
 
 #col2 {
     background-color:white;
-    width:300px;
-    float:left;
+    width:40%;
+    float: left; 
     margin-top:25px;
 }
 #footer {
@@ -77,14 +77,16 @@ ul
 #task-list {
     width:100%;
     font-size: 30px;
-    height:45px;
+    height:100%;
     padding-top:22.5px;
+    padding-bottom:22.5px;
   text-align: center;
 
 }
+
+
 li:nth-child(odd) { 
   background: #9BA1A0; 
-  
 }
 
 #delete-button {
