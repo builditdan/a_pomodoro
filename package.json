@@ -1,6 +1,8 @@
 {
   "name": "a_pomodoro",
   "version": "0.0.2",
+  "engines": {
+    "node": "4.4.3",
   "description": "Starter project for the Bloc Frontend Web Development",
   "repository": {
     "type": "git",
