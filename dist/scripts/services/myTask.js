@@ -26,8 +26,41 @@
       }
     }
 
+    //function signInA() {
+     
+  //  }
     
-    var firebaseRef = new Firebase("https://project-2801774550174553817.firebaseio.com/");
+    var firebaseRef = new Firebase("https://project-2455511480279771792.firebaseio.com/");
+   
+//    
+//    // Create a callback to handle the result of the authentication
+//    function authHandler(error, authData) {
+//      if (error) {
+//        console.log("Login Failed!", error);
+//      } else {
+//        console.log("Authenticated successfully with payload:", authData);
+//      }
+//    }
+//    
+//    firebaseRef.authAnonymously(authHandler);
+//    
+//    firebaseRef.auth(null).onAuthStateChanged(function(user) {
+//  if (user) {
+//    // User is signed in.
+//    var isAnonymous = user.isAnonymous;
+//    var uid = user.uid;
+//    // ...
+//    consle.log("It worked now authenticated");
+//  } else {
+//    console.log("User was logged out");
+//    // User is signed out.
+//    // ...
+//  }
+//  // ...
+//});
+    
+    
+    
     var tasks = $firebaseArray(firebaseRef);
     
     
@@ -36,7 +69,8 @@
        all: tasks,
        add: addTask,
        delete: deleteTask,
-       deleteAll: deleteAllTasks, 
+       deleteAll: deleteAllTasks,
+       //signInAnonymously: signInA,
        fbRef: firebaseRef
     }
   }

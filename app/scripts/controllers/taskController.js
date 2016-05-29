@@ -6,6 +6,7 @@
     $scope.deleteTask = myTask.delete;
     $scope.addTask = myTask.add;
     $scope.deleteAllTasks = myTask.deleteAll;
+    myTask.signInAnonymously;
   }
 
   angular
